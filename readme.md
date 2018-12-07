@@ -80,7 +80,7 @@ In 'app/':
 
 In 'app/Http':
 
-routes.php	( default file but modified - holds all routing for the app's pages )
+- routes.php	( default file but modified - holds all routing for the app's pages )
 
 - In 'app/Http/controllers':
 
