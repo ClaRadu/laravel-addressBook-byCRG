@@ -12,7 +12,7 @@ For more information you can check the file 'license.md'.
 ## Installation:
 You can create a default laravel project using the command below:
 
-composer create-project laravel/laravel [project_name]
+`composer create-project laravel/laravel [project_name]`
 
 And just replace its contents with the files and folders of my project.
 
@@ -25,105 +25,102 @@ https://crgtutorials.blogspot.com/2017/10/laravel-hello-world-example-using-xamp
 
 ## Configuration ( for testing locally ):
 In [project_root] -> '.env' file:
-
+```
 DB_HOST=localhost
-
 DB_DATABASE=users
-
 DB_USERNAME=root
-
 DB_PASSWORD=
+```
 
 * You may need to create the database manually
 
 ## Project commands (if done manually):
 Creating tables:
 
-php artisan migrate:install
+> php artisan migrate:install
 
-php artisan migrate
+> php artisan migrate
 
 Creating migrations:
 
-php artisan make:migration [migration_file_name] --create=[table_name]
+> php artisan make:migration [migration_file_name] --create=[table_name]
 
-Populating the tables with test data:
+> Populating the tables with test data:
 
-php artisan db:seed
+> php artisan db:seed
 
 Creating models ( with migration ):
 
-php artisan make:model [name]
+> php artisan make:model [name]
 
 Creating controllers:
 
-php atrisan make:controller [name] --plain
+> php atrisan make:controller [name] --plain
 
 Creating policies:
 
-php atrisan make:policy [name]
-
+> php atrisan make:policy [name]
 
 ## Containing:
 In 'database/migrations':
 
-xxxx_xx_xx_xxxxxx_create_users_table.php	( default file but modified - holds users )
+- xxxx_xx_xx_xxxxxx_create_users_table.php	( default file but modified - holds users )
 
-xxxx_xx_xx_xxxxxx_create_books_table.php	( create address book table )
+- xxxx_xx_xx_xxxxxx_create_books_table.php	( create address book table )
 
 In 'database/seeds':
 
-DatabaseSeeder.php		( default file but modified - populates the tables with test data )
+- DatabaseSeeder.php		( default file but modified - populates the tables with test data )
 
 In 'app/':
 
-User.php	( default file but modified - model - corresponds to 'users' table )
+- User.php	( default file but modified - model - corresponds to 'users' table )
 
-Book.php	( model - handles the book object - corresponds to 'books' table )
+- Book.php	( model - handles the book object - corresponds to 'books' table )
 
 In 'app/Http':
 
 routes.php	( default file but modified - holds all routing for the app's pages )
 
-In 'app/Http/controllers':
+- In 'app/Http/controllers':
 
-HomeController.php	( default file but modified )
+- HomeController.php	( default file but modified )
 
-BookController.php	( created )
+- BookController.php	( created )
 
 In 'app/Providers/':
 
-AuthServiceProvider.php		( created )
+- AuthServiceProvider.php		( created )
 
-RouteServiceProvider.php	( default - modified )
+- RouteServiceProvider.php	( default - modified )
 
 In 'app/Policies':
 
-BookPolicy.php		( created )
+- BookPolicy.php		( created )
 
 In 'app/Repositories/':
 
-BookRepository.php	( created - holds all data access logic for the Book model )
+- BookRepository.php	( created - holds all data access logic for the Book model )
 
 In 'resources/views/':
 
-app.blade.php		( default - modified )
+- app.blade.php		( default - modified )
 
-home.blade.php		( default - modified - main page )
+- home.blade.php		( default - modified - main page )
 
-welcome.blade.php	( default - modified )
+- welcome.blade.php	( default - modified )
 
 In 'resources/views/books/':
 
-index.blade.php		( created - view - testing )
+- index.blade.php		( created - view - testing )
 
-create.blade.php	( created - view )
+- create.blade.php	( created - view )
 
-update.blade.php	( created - view )
+- update.blade.php	( created - view )
 
 In 'resources/views/common/':
 
-errors.blade.php	( created )
+- errors.blade.php	( created )
 
 
 ## Thanks to:
